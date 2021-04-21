@@ -68,12 +68,6 @@ function App() {
             </div>
           </div>
         </div>
-        <p>
-          <a href="https://github.com/tgrier6" target="_blank" rel="noreferrer">
-            GitHub
-          </a>{" "}
-          of Tiara Grier.
-        </p>
       </div>
     </div>
   );
