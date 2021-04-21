@@ -82,11 +82,9 @@ function App() {
             id="icon"
           />
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">Text. Text. Text.</p>
-            <p className="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
+            <h5 className="card-title">Thursday</h5>
+            <p className="card-text"> 75 F˚ | C˚</p>
+            <p className="card-text">Clear skies</p>
           </div>
         </div>
         <div className="col-2">
@@ -97,11 +95,9 @@ function App() {
             id="icon"
           />
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">Text. Text. Text.</p>
-            <p className="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
+            <h5 className="card-title">Friday</h5>
+            <p className="card-text"> 81 F˚ | C˚</p>
+            <p className="card-text">Sunny</p>
           </div>
         </div>
         <div className="col-2">
@@ -112,11 +108,9 @@ function App() {
             id="icon"
           />
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">Text. Text. Text.</p>
-            <p className="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
+            <h5 className="card-title">Saturday</h5>
+            <p className="card-text"> 72 F˚ | C˚</p>
+            <p className="card-text">Cloudy</p>
           </div>
         </div>
         <div className="col-2">
@@ -127,11 +121,9 @@ function App() {
             id="icon"
           />
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">Text. Text. Text.</p>
-            <p className="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
+            <h5 className="card-title">Sunday</h5>
+            <p className="card-text"> 70 F˚ | C˚</p>
+            <p className="card-text">Rain</p>
           </div>
         </div>
         <div className="col-2">
@@ -142,11 +134,9 @@ function App() {
             id="icon"
           />
           <div className="card-body">
-            <h5 className="card-title">Card title</h5>
-            <p className="card-text">Text. Text. Text.</p>
-            <p className="card-text">
-              <small class="text-muted">Last updated 3 mins ago</small>
-            </p>
+            <h5 className="card-title">Monday</h5>
+            <p className="card-text"> 75 F˚ | C˚</p>
+            <p className="card-text">Clear skies</p>
           </div>
         </div>
       </div>
