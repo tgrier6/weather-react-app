@@ -9,6 +9,12 @@ ul {
   padding: 0;
 }
 
+.card-group {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
 .container {
   padding-top: 20px;
 }
