@@ -38,11 +38,11 @@ export default function Weather() {
               </h3>
               <ul>
                 <li className="temperature">
-                  {Math.round(weatherData.temperature)}F˚
+                  {Math.round(weatherData.temperature)} F˚
                 </li>
                 <li>{weatherData.date}</li>
-                <li>Humidity: {weatherData.humidity}</li>
-                <li>Wind: {weatherData.wind}</li>
+                <li>Humidity: {weatherData.humidity}%</li>
+                <li>Wind: {Math.round(weatherData.wind)} mph</li>
                 <li className="text-capitalize">{weatherData.description}</li>
               </ul>
             </div>
