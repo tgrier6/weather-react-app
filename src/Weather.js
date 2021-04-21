@@ -42,7 +42,7 @@ export default function Weather() {
                   {Math.round(weatherData.temperature)}
                 </li>
                 <li>
-                  <DateTime />
+                  <DateTime date={weatherData.date} />
                 </li>
                 <li>Humidity: {weatherData.humidity}%</li>
                 <li>Wind: {Math.round(weatherData.wind)} mph</li>

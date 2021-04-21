@@ -16,13 +16,13 @@ export default function DateTime(props) {
   if (hours < 10) {
     hours = `0${hours}`;
   }
-  let minutes = props.date.getminutes();
+  let minutes = props.date.getMinutes();
   if (minutes < 10) {
     minutes = `0${minutes}`;
   }
 
   return (
-    <div>
+    <div className="dateTime">
       {day} | {hours}:{minutes}
     </div>
   );
