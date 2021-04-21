@@ -16,8 +16,6 @@ export default function Weather() {
       wind: response.data.wind.speed,
       city: response.data.name,
     });
-
-    setReady(true);
   }
 
   if (weatherData.ready) {
