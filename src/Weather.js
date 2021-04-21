@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import DateTime from "./DateTime";
 import "./App.css";
 
 export default function Weather() {
@@ -10,7 +11,7 @@ export default function Weather() {
       ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
-      date: "Wednesday | 19:00",
+      date: new Date(response.data.dt * 1000),
       description: response.data.weather[0].description,
       iconUrl: "http://openweathermap.org/img/wn/03d@2x.png",
       wind: response.data.wind.speed,
@@ -38,9 +39,11 @@ export default function Weather() {
               </h3>
               <ul>
                 <li className="temperature">
-                  {Math.round(weatherData.temperature)} F˚
+                  {Math.round(weatherData.temperature)}
                 </li>
-                <li>{weatherData.date}</li>
+                <li>
+                  <DateTime date={weatherData.date} />
+                </li>
                 <li>Humidity: {weatherData.humidity}%</li>
                 <li>Wind: {Math.round(weatherData.wind)} mph</li>
                 <li className="text-capitalize">{weatherData.description}</li>
