@@ -17,7 +17,7 @@ export default function Weather() {
   if (ready) {
     return (
       <ul>
-        <li className="temperature">{Math.round(temperature)}</li>
+        <li className="temperature">{Math.round(temperature)}F˚</li>
         <li>
           <DateTime />
         </li>
