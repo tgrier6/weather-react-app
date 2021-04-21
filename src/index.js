@@ -74,7 +74,7 @@ function App() {
       </div>
 
       <div className="card-group">
-        <div className="col-sm-2">
+        <div className="col-2">
           <img
             src="http://openweathermap.org/img/wn/03d@2x.png"
             className="Sunshine"
@@ -90,7 +90,7 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="col-sm-2">
+        <div className="col-2">
           <img
             src="http://openweathermap.org/img/wn/03d@2x.png"
             className="Sunshine"
@@ -106,7 +106,7 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="col-sm-2">
+        <div className="col-2">
           <img
             src="http://openweathermap.org/img/wn/03d@2x.png"
             className="Sunshine"
@@ -122,7 +122,7 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="col-sm-2">
+        <div className="col-2">
           <img
             src="http://openweathermap.org/img/wn/03d@2x.png"
             className="Sunshine"
@@ -138,7 +138,7 @@ function App() {
             </p>
           </div>
         </div>
-        <div className="col-sm-2">
+        <div className="col-2">
           <img
             src="http://openweathermap.org/img/wn/03d@2x.png"
             className="Sunshine"
