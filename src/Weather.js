@@ -3,13 +3,14 @@ import axios from "axios";
 import "./App.css";
 
 export default function Weather() {
-  const [ready, setReady] = useState(false);
-  const [weatherData, setWeatherData] = useState({});
+  const [weatherData, setWeatherData] = useState({ ready: false });
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
+      ready: true,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
+      date: "Wednesday | 19:00",
       description: response.data.weather[0].description,
       iconUrl: "http://openweathermap.org/img/wn/03d@2x.png",
       wind: response.data.wind.speed,
@@ -19,7 +20,7 @@ export default function Weather() {
     setReady(true);
   }
 
-  if (ready) {
+  if (weatherData.ready) {
     return (
       <div className="card mb-3" id="top-display">
         <div className="row g-0" id="td-weather">
@@ -27,7 +28,7 @@ export default function Weather() {
             <img
               src={weatherData.iconUrl}
               className="Sunshine"
-              alt="Mostly Cloudy"
+              alt={weatherData.description}
               id="icon"
               width="300px"
             />
@@ -41,10 +42,10 @@ export default function Weather() {
                 <li className="temperature">
                   {Math.round(weatherData.temperature)}F˚
                 </li>
-                <li>Wednesday | 19:00</li>
+                <li>{weatherData.date}</li>
                 <li>Humidity: {weatherData.humidity}</li>
                 <li>Wind: {weatherData.wind}</li>
-                <li>{weatherData.description}</li>
+                <li className="text-capitalize">{weatherData.description}</li>
               </ul>
             </div>
           </div>
