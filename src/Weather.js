@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import DateTime from "./DateTime";
+import WeatherInfo from "./WeatherInfo";
 import "./App.css";
 
 export default function Weather() {
@@ -21,36 +21,27 @@ export default function Weather() {
 
   if (weatherData.ready) {
     return (
-      <div className="card mb-3" id="top-display">
-        <div className="row g-0" id="td-weather">
-          <div className="col-md-6">
-            <img
-              src={weatherData.iconUrl}
-              className="Sunshine"
-              alt={weatherData.description}
-              id="icon"
-              width="300px"
+      <div className="Weather-App">
+        <form className="search">
+          <form id="search-bar">
+            <input
+              type="search"
+              placeholder="Enter Your City Here"
+              id="city-input"
             />
-          </div>
-          <div className="col-md-6">
-            <div className="card-body">
-              <h3 className="card-title" id="city">
-                {weatherData.city}
-              </h3>
-              <ul>
-                <li className="temperature">
-                  {Math.round(weatherData.temperature)} ˚F | ˚C
-                </li>
-                <li>
-                  <DateTime date={weatherData.date} />
-                </li>
-                <li>Humidity: {weatherData.humidity}%</li>
-                <li>Wind: {Math.round(weatherData.wind)} mph</li>
-                <li className="text-capitalize">{weatherData.description}</li>
-              </ul>
-            </div>
-          </div>
-        </div>
+            <button type="submit" className="btn btn-outline-primary" id="btn">
+              Search
+            </button>
+            <button
+              id="current-location-button"
+              type="button"
+              className="btn btn-outline-primary"
+            >
+              <i className="fas fa-location-arrow" id="arrow-button"></i>
+            </button>
+          </form>
+        </form>
+        <WeatherInfo info={weatherData} />
       </div>
     );
   } else {

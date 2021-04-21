@@ -9,26 +9,6 @@ function App() {
   return (
     <div className="App">
       <div className="container">
-        <form className="search">
-          <form id="search-bar">
-            <input
-              type="search"
-              placeholder="Enter Your City Here"
-              id="city-input"
-            />
-            <button type="submit" className="btn btn-outline-primary" id="btn">
-              Search
-            </button>
-            <button
-              id="current-location-button"
-              type="button"
-              className="btn btn-outline-primary"
-            >
-              <i className="fas fa-location-arrow" id="arrow-button"></i>
-            </button>
-          </form>
-        </form>
-
         <Weather />
       </div>
 
