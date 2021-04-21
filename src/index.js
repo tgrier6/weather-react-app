@@ -80,7 +80,6 @@ function App() {
             className="Sunshine"
             alt=""
             id="icon"
-            width="300px"
           />
           <div className="card-body">
             <h5 className="card-title">Card title</h5>
@@ -96,7 +95,6 @@ function App() {
             className="Sunshine"
             alt=""
             id="icon"
-            width="300px"
           />
           <div className="card-body">
             <h5 className="card-title">Card title</h5>
@@ -112,7 +110,6 @@ function App() {
             className="Sunshine"
             alt=""
             id="icon"
-            width="300px"
           />
           <div className="card-body">
             <h5 className="card-title">Card title</h5>
@@ -128,7 +125,6 @@ function App() {
             className="Sunshine"
             alt=""
             id="icon"
-            width="300px"
           />
           <div className="card-body">
             <h5 className="card-title">Card title</h5>
@@ -144,7 +140,6 @@ function App() {
             className="Sunshine"
             alt=""
             id="icon"
-            width="300px"
           />
           <div className="card-body">
             <h5 className="card-title">Card title</h5>
