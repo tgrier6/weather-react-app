@@ -83,7 +83,7 @@ function App() {
           />
           <div className="card-body">
             <h5 className="card-title">Thursday</h5>
-            <p className="card-text"> 75 F˚ | C˚</p>
+            <p className="card-text">75 | 62</p>
             <p className="card-text">Clear skies</p>
           </div>
         </div>
@@ -96,7 +96,7 @@ function App() {
           />
           <div className="card-body">
             <h5 className="card-title">Friday</h5>
-            <p className="card-text"> 81 F˚ | C˚</p>
+            <p className="card-text">81 | 68</p>
             <p className="card-text">Sunny</p>
           </div>
         </div>
@@ -109,7 +109,7 @@ function App() {
           />
           <div className="card-body">
             <h5 className="card-title">Saturday</h5>
-            <p className="card-text"> 72 F˚ | C˚</p>
+            <p className="card-text">72 | 65</p>
             <p className="card-text">Cloudy</p>
           </div>
         </div>
@@ -122,7 +122,7 @@ function App() {
           />
           <div className="card-body">
             <h5 className="card-title">Sunday</h5>
-            <p className="card-text"> 70 F˚ | C˚</p>
+            <p className="card-text">70 | 56</p>
             <p className="card-text">Rain</p>
           </div>
         </div>
@@ -135,7 +135,7 @@ function App() {
           />
           <div className="card-body">
             <h5 className="card-title">Monday</h5>
-            <p className="card-text"> 75 F˚ | C˚</p>
+            <p className="card-text">75 | 68</p>
             <p className="card-text">Clear skies</p>
           </div>
         </div>
