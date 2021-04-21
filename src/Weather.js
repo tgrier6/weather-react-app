@@ -1,5 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
+import DateTime from "./DateTime";
+import Humidity from "./Humidity";
+import Wind from "./Wind";
+import Description from "./Description";
 
 export default function Weather() {
-  return <h1>HELLO WORLD!!!</h1>;
+  const [ready, setReady] = useState(false);
+  const [temperaure, setTemperature] = useState(null);
+  function handleResponse(response) {
+    console.log(response.data);
+    setTemperature(Math.round(response.data.main.temp));
+    setReady(true);
+  }
+
+  if (ready) {
+    return (
+      <ul>
+        <li>Temperature:</li>
+        <li>
+          Wednesday: <DateTime />
+        </li>
+        <li>
+          Humidity: <Humidity />
+        </li>
+        <li>
+          Wind: <Wind />
+        </li>
+        <li>
+          Description: <Description />
+        </li>
+      </ul>
+    );
+  } else {
+    const apiKey = "98b5711bc7358d439ba8e0b45dbf74b0";
+    let city = "Atlanta";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
+
+    return "Loading...";
+  }
 }

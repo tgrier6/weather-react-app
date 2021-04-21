@@ -1,11 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
-import Temperature from "./Temperature";
-import DateTime from "./DateTime";
-import Humidity from "./Humidity";
-import Wind from "./Wind";
-import Description from "./Description";
+import Weather from "./Weather";
 
 import "./App.css";
 
@@ -50,23 +46,7 @@ function App() {
                 <h3 className="card-title" id="city">
                   Atlanta, GA
                 </h3>
-                <ul>
-                  <li>
-                    <Temperature />
-                  </li>
-                  <li>
-                    <DateTime />
-                  </li>
-                  <li>
-                    <Humidity />
-                  </li>
-                  <li>
-                    <Wind />
-                  </li>
-                  <li>
-                    <Description />
-                  </li>
-                </ul>
+                <Weather />
               </div>
             </div>
           </div>
