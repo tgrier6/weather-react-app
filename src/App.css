@@ -3,13 +3,14 @@ h5 {
   text-align: center;
 }
 
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   padding-top: 20px;
-  border-radius: 25px;
-  box-shadow: 9px 9px 5px rgba(0, 0, 0, 0.3);
-  padding-top: 20px;
-  max-width: 1200px;
-  text-align: center;
 }
 
 .open-source {
@@ -21,10 +22,29 @@ h5 {
   text-align: right;
 }
 
+.weather-app {
+  border-radius: 25px;
+  box-shadow: 9px 9px 5px rgba(0, 0, 0, 0.3);
+  padding-top: 20px;
+  max-width: 1200px;
+  text-align: center;
+}
+
 #float-container {
   float: inline-end;
 }
 
 #forecast {
   text-align: center;
+}
+
+#top-display {
+  border-radius: 25px;
+  display: inline;
+  text-align: center;
+  max-width: 1200px;
+}
+
+#td-weather {
+  padding-bottom: 15px;
 }
