@@ -29,28 +29,7 @@ function App() {
           </form>
         </form>
 
-        <div className="card mb-3" id="top-display">
-          <div className="row g-0" id="td-weather">
-            <div className="col-md-6">
-              <img
-                src="http://openweathermap.org/img/wn/03d@2x.png"
-                className="Sunshine"
-                alt=""
-                id="icon"
-                width="300px"
-              />
-            </div>
-
-            <div className="col-md-6">
-              <div className="card-body">
-                <h3 className="card-title" id="city">
-                  Atlanta, GA
-                </h3>
-                <Weather />
-              </div>
-            </div>
-          </div>
-        </div>
+        <Weather />
       </div>
 
       <div className="card-group">

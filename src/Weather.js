@@ -1,36 +1,55 @@
 import React, { useState } from "react";
 import axios from "axios";
-import DateTime from "./DateTime";
-import Humidity from "./Humidity";
-import Wind from "./Wind";
-import Description from "./Description";
+import "./App.css";
 
 export default function Weather() {
   const [ready, setReady] = useState(false);
-  const [temperature, setTemperature] = useState(null);
+  const [weatherData, setWeatherData] = useState({});
   function handleResponse(response) {
     console.log(response.data);
-    setTemperature(Math.round(response.data.main.temp));
+    setWeatherData({
+      temperature: response.data.main.temp,
+      humidity: response.data.main.humidity,
+      description: response.data.weather[0].description,
+      iconUrl: "http://openweathermap.org/img/wn/03d@2x.png",
+      wind: response.data.wind.speed,
+      city: response.data.name,
+    });
+
     setReady(true);
   }
 
   if (ready) {
     return (
-      <ul>
-        <li className="temperature">{Math.round(temperature)}F˚</li>
-        <li>
-          <DateTime />
-        </li>
-        <li>
-          <Humidity />
-        </li>
-        <li>
-          <Wind />
-        </li>
-        <li>
-          <Description />
-        </li>
-      </ul>
+      <div className="card mb-3" id="top-display">
+        <div className="row g-0" id="td-weather">
+          <div className="col-md-6">
+            <img
+              src={weatherData.iconUrl}
+              className="Sunshine"
+              alt="Mostly Cloudy"
+              id="icon"
+              width="300px"
+            />
+          </div>
+          <div className="col-md-6">
+            <div className="card-body">
+              <h3 className="card-title" id="city">
+                {weatherData.city}
+              </h3>
+              <ul>
+                <li className="temperature">
+                  {Math.round(weatherData.temperature)}F˚
+                </li>
+                <li>Wednesday | 19:00</li>
+                <li>Humidity: {weatherData.humidity}</li>
+                <li>Wind: {weatherData.wind}</li>
+                <li>{weatherData.description}</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
     );
   } else {
     const apiKey = "98b5711bc7358d439ba8e0b45dbf74b0";
