@@ -19,16 +19,16 @@ export default function Weather() {
       <ul>
         <li className="temperature">{Math.round(temperature)}</li>
         <li>
-          Wednesday: <DateTime />
+          <DateTime />
         </li>
         <li>
-          Humidity: <Humidity />
+          <Humidity />
         </li>
         <li>
-          Wind: <Wind />
+          <Wind />
         </li>
         <li>
-          Description: <Description />
+          <Description />
         </li>
       </ul>
     );
