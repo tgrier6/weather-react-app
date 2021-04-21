@@ -43,6 +43,7 @@ function App() {
               width="300px"
             />
           </div>
+
           <div className="col-md-6">
             <div className="card-body">
               <h3 className="card-title" id="city">
@@ -66,6 +67,89 @@ function App() {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="card-group">
+        <div className="card">
+          <img
+            src="http://openweathermap.org/img/wn/03d@2x.png"
+            className="Sunshine"
+            alt=""
+            id="icon"
+            width="300px"
+          />
+          <div className="card-body">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text">Text. Text. Text.</p>
+            <p className="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+        <div className="card">
+          <img
+            src="http://openweathermap.org/img/wn/03d@2x.png"
+            className="Sunshine"
+            alt=""
+            id="icon"
+            width="300px"
+          />
+          <div className="card-body">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text">Text. Text. Text.</p>
+            <p className="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+        <div className="card">
+          <img
+            src="http://openweathermap.org/img/wn/03d@2x.png"
+            className="Sunshine"
+            alt=""
+            id="icon"
+            width="300px"
+          />
+          <div className="card-body">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text">Text. Text. Text.</p>
+            <p className="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+        <div className="card">
+          <img
+            src="http://openweathermap.org/img/wn/03d@2x.png"
+            className="Sunshine"
+            alt=""
+            id="icon"
+            width="300px"
+          />
+          <div className="card-body">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text">Text. Text. Text.</p>
+            <p className="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
+          </div>
+        </div>
+        <div className="card">
+          <img
+            src="http://openweathermap.org/img/wn/03d@2x.png"
+            className="Sunshine"
+            alt=""
+            id="icon"
+            width="300px"
+          />
+          <div className="card-body">
+            <h5 className="card-title">Card title</h5>
+            <p className="card-text">Text. Text. Text.</p>
+            <p className="card-text">
+              <small class="text-muted">Last updated 3 mins ago</small>
+            </p>
           </div>
         </div>
       </div>
