@@ -7,7 +7,7 @@ import Description from "./Description";
 
 export default function Weather() {
   const [ready, setReady] = useState(false);
-  const [temperaure, setTemperature] = useState(null);
+  const [temperature, setTemperature] = useState(null);
   function handleResponse(response) {
     console.log(response.data);
     setTemperature(Math.round(response.data.main.temp));
@@ -17,7 +17,7 @@ export default function Weather() {
   if (ready) {
     return (
       <ul>
-        <li>Temperature:</li>
+        <li className="temperature">{Math.round(temperature)}</li>
         <li>
           Wednesday: <DateTime />
         </li>
