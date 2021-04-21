@@ -39,7 +39,7 @@ export default function Weather() {
               </h3>
               <ul>
                 <li className="temperature">
-                  {Math.round(weatherData.temperature)}
+                  {Math.round(weatherData.temperature)} ˚F | ˚C
                 </li>
                 <li>
                   <DateTime date={weatherData.date} />
