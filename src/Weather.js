@@ -29,7 +29,7 @@ export default function Weather(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    searchCity();
+    searchCity(city);
   }
 
   function handleCityChange(event) {
@@ -63,7 +63,7 @@ export default function Weather(props) {
       </div>
     );
   } else {
-    searchCity("Atlanta");
+    searchCity();
     return "Loading...";
   }
 }
