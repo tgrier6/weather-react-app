@@ -18,7 +18,7 @@ export default function WeatherInfo(props) {
           </div>
           <div className="col-md-6">
             <div className="card-body">
-              <h3 className="card-title" id="city" city="Atlanta">
+              <h3 className="card-title" id="city">
                 {props.data.city}
               </h3>
               <ul>
