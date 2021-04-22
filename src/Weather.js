@@ -3,8 +3,10 @@ import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
 import "./App.css";
 
-export default function Weather() {
+export default function Weather(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.defaultCity);
+
   function handleResponse(response) {
     console.log(response.data);
     setWeatherData({
@@ -19,11 +21,20 @@ export default function Weather() {
     });
   }
 
-  function handleSubmit(event) {
-    event.preventDefault();
+  function searchCity() {
+    const apiKey = "98b5711bc7358d439ba8e0b45dbf74b0";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
+    axios.get(apiUrl).then(handleResponse);
   }
 
-  function handleCityChange(event) {}
+  function handleSubmit(event) {
+    event.preventDefault();
+    searchCity();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
 
   if (weatherData.ready) {
     return (
@@ -48,15 +59,11 @@ export default function Weather() {
             </button>
           </form>
         </form>
-        <WeatherInfo data={weatherData} />
+        <WeatherInfo />
       </div>
     );
   } else {
-    const apiKey = "98b5711bc7358d439ba8e0b45dbf74b0";
-    let city = "Atlanta";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(handleResponse);
-
+    searchCity("Atlanta");
     return "Loading...";
   }
 }
