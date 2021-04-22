@@ -1,16 +1,17 @@
 import React from "react";
 import DateTime from "./DateTime";
+import "./App.css";
 
 export default function WeatherInfo(props) {
   return (
-    <div className="Weather-Info">
+    <div className="WeatherInfo">
       <div className="card mb-3" id="top-display">
         <div className="row g-0" id="td-weather">
           <div className="col-md-6">
             <img
-              src={props.iconUrl}
+              src={props.data.iconUrl}
               className="Sunshine"
-              alt={props.description}
+              alt={props.data.description}
               id="icon"
               width="300px"
             />
@@ -18,18 +19,18 @@ export default function WeatherInfo(props) {
           <div className="col-md-6">
             <div className="card-body">
               <h3 className="card-title" id="city">
-                {props.city}
+                {props.data.city}
               </h3>
               <ul>
                 <li className="temperature">
-                  {Math.round(props.temperature)} ˚F | ˚C
+                  {Math.round(props.data.temperature)} ˚F | ˚C
                 </li>
                 <li>
-                  <DateTime date={props.date} />
+                  <DateTime date={props.data.date} />
                 </li>
-                <li>Humidity: {props.humidity}%</li>
-                <li>Wind: {Math.round(props.wind)} mph</li>
-                <li className="text-capitalize">{props.description}</li>
+                <li>Humidity: {props.data.humidity}%</li>
+                <li>Wind: {Math.round(props.data.wind)} mph</li>
+                <li className="text-capitalize">{props.data.description}</li>
               </ul>
             </div>
           </div>

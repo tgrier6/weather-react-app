@@ -19,15 +19,22 @@ export default function Weather() {
     });
   }
 
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
+  function handleCityChange(event) {}
+
   if (weatherData.ready) {
     return (
       <div className="Weather-App">
-        <form className="search">
+        <form className="search" onSubmit={handleSubmit}>
           <form id="search-bar">
             <input
               type="search"
               placeholder="Enter Your City Here"
               id="city-input"
+              onChange={handleCityChange}
             />
             <button type="submit" className="btn btn-outline-primary" id="btn">
               Search
@@ -41,7 +48,7 @@ export default function Weather() {
             </button>
           </form>
         </form>
-        <WeatherInfo info={weatherData} />
+        <WeatherInfo data={weatherData} />
       </div>
     );
   } else {
