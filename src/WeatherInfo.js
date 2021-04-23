@@ -1,5 +1,6 @@
 import React from "react";
 import DateTime from "./DateTime";
+import WeatherIcon from "./WeatherIcon";
 import "./App.css";
 
 export default function WeatherInfo(props) {
@@ -8,13 +9,9 @@ export default function WeatherInfo(props) {
       <div className="card mb-3" id="top-display">
         <div className="row g-0" id="td-weather">
           <div className="col-md-6">
-            <img
-              src={props.data.iconUrl}
-              className="Sunshine"
-              alt={props.data.description}
-              id="icon"
-              width="300px"
-            />
+            <div className="float-center">
+              <WeatherIcon code={props.data.icon} />
+            </div>
           </div>
           <div className="col-md-6">
             <div className="card-body">
