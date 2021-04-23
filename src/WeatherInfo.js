@@ -1,6 +1,7 @@
 import React from "react";
 import DateTime from "./DateTime";
 import WeatherIcon from "./WeatherIcon";
+import WeatherTemperature from "./WeatherTemperature";
 import "./App.css";
 
 export default function WeatherInfo(props) {
@@ -19,8 +20,8 @@ export default function WeatherInfo(props) {
                 {props.data.city}
               </h3>
               <ul>
-                <li className="temperature">
-                  {Math.round(props.data.temperature)} ˚F | ˚C
+                <li>
+                  <WeatherTemperature fahrenheit={props.data.temperature} />
                 </li>
                 <li>
                   <DateTime date={props.data.date} />
