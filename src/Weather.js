@@ -23,7 +23,7 @@ export default function Weather(props) {
 
   function searchCity() {
     const apiKey = "98b5711bc7358d439ba8e0b45dbf74b0";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city.input.value}&appid=${apiKey}&units=imperial`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
     axios.get(apiUrl).then(handleResponse);
   }
 
@@ -40,7 +40,7 @@ export default function Weather(props) {
     return (
       <div className="Weather-App">
         <form id="search-bar" onSubmit={handleSubmit}>
-          <form className="search" onSubmit={handleSubmit}>
+          <div className="search">
             <input
               type="search"
               placeholder="Enter Your City Here"
@@ -57,7 +57,7 @@ export default function Weather(props) {
             >
               <i className="fas fa-location-arrow" id="arrow-button"></i>
             </button>
-          </form>
+          </div>
         </form>
         <WeatherInfo data={weatherData} />
       </div>
