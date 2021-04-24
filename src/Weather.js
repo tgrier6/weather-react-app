@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import "./App.css";
 
 export default function Weather(props) {
@@ -11,6 +12,7 @@ export default function Weather(props) {
     //console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coord,
       temperature: response.data.main.temp,
       humidity: response.data.main.humidity,
       date: new Date(response.data.dt * 1000),
@@ -38,28 +40,35 @@ export default function Weather(props) {
 
   if (weatherData.ready) {
     return (
-      <div className="Weather-App">
-        <form id="search-bar" onSubmit={handleSubmit}>
-          <div className="search">
-            <input
-              type="search"
-              placeholder="Enter Your City Here"
-              id="city-input"
-              onChange={handleCityChange}
-            />
-            <button type="submit" className="btn btn-outline-primary" id="btn">
-              Search
-            </button>
-            <button
-              id="current-location-button"
-              type="button"
-              className="btn btn-outline-primary"
-            >
-              <i className="fas fa-location-arrow" id="arrow-button"></i>
-            </button>
-          </div>
-        </form>
-        <WeatherInfo data={weatherData} />
+      <div className="all-weather">
+        <div className="Weather-App">
+          <form id="search-bar" onSubmit={handleSubmit}>
+            <div className="search">
+              <input
+                type="search"
+                placeholder="Enter Your City Here"
+                id="city-input"
+                onChange={handleCityChange}
+              />
+              <button
+                type="submit"
+                className="btn btn-outline-primary"
+                id="btn"
+              >
+                Search
+              </button>
+              <button
+                id="current-location-button"
+                type="button"
+                className="btn btn-outline-primary"
+              >
+                <i className="fas fa-location-arrow" id="arrow-button"></i>
+              </button>
+            </div>
+          </form>
+          <WeatherInfo data={weatherData} />
+        </div>
+        <WeatherForecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {
