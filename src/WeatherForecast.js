@@ -20,7 +20,7 @@ export default function WeatherForecast(props) {
     console.log(forecast);
     return (
       <div className="card-group">
-        <WeatherForecastDay data={forecast[0]} />
+        <WeatherForecastDay data={forecast[1]} />
         <div className="col-2">
           <WeatherIcon code="01d" />
           <div className="card-body">
