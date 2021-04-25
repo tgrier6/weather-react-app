@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import WeatherIcon from "./WeatherIcon";
+import React, { useState, useEffect } from "react";
 import WeatherForecastDay from "./WeatherForecastDay";
 import "./App.css";
 import axios from "axios";
@@ -7,6 +6,11 @@ import axios from "axios";
 export default function WeatherForecast(props) {
   let [loaded, setLoaded] = useState(false);
   let [forecast, setForecast] = useState(null);
+
+  //Refreshes 5-Day Forecast- Tells that loaded is false and triggers else statement below
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
 
   function handleResponse(response) {
     //console.log(response.data);
