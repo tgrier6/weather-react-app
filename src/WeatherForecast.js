@@ -20,46 +20,20 @@ export default function WeatherForecast(props) {
     console.log(forecast);
     return (
       <div className="card-group">
-        <WeatherForecastDay data={forecast[1]} />
         <div className="col-2">
-          <WeatherIcon code="01d" />
-          <div className="card-body">
-            <h5 className="card-title">Friday</h5>
-            <p className="card-text">
-              <strong>81</strong> | 68
-            </p>
-            <p className="card-text">Sunny</p>
-          </div>
+          <WeatherForecastDay data={forecast[1]} />
         </div>
         <div className="col-2">
-          <WeatherIcon code="01d" />
-          <div className="card-body">
-            <h5 className="card-title">Saturday</h5>
-            <p className="card-text">
-              <strong>72</strong> | 65
-            </p>
-            <p className="card-text">Cloudy</p>
-          </div>
+          <WeatherForecastDay data={forecast[2]} />
         </div>
         <div className="col-2">
-          <WeatherIcon code="01d" />
-          <div className="card-body">
-            <h5 className="card-title">Sunday</h5>
-            <p className="card-text">
-              <strong>70</strong> | 56
-            </p>
-            <p className="card-text">Rain</p>
-          </div>
+          <WeatherForecastDay data={forecast[3]} />
         </div>
         <div className="col-2">
-          <WeatherIcon code="01d" />
-          <div className="card-body">
-            <h5 className="card-title">Monday</h5>
-            <p className="card-text">
-              <strong>75</strong> | 68
-            </p>
-            <p className="card-text">Clear skies</p>
-          </div>
+          <WeatherForecastDay data={forecast[4]} />
+        </div>
+        <div className="col-2">
+          <WeatherForecastDay data={forecast[5]} />
         </div>
       </div>
     );

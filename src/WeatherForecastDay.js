@@ -23,14 +23,13 @@ export default function WeatherForecastData(props) {
   }
 
   return (
-    <div className="col-2">
+    <div>
       <WeatherIcon code={props.data.weather[0].icon} size={90} />
       <div className="card-body">
         <h5 className="card-title">{day()}</h5>
         <p className="card-text">
           <strong>{maxTemperature()}</strong> | {minTemperature()}
         </p>
-        <p className="card-text">Clear skies</p>
       </div>
     </div>
   );
