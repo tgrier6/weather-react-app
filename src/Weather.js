@@ -57,13 +57,6 @@ export default function Weather(props) {
               >
                 Search
               </button>
-              <button
-                id="current-location-button"
-                type="button"
-                className="btn btn-outline-primary"
-              >
-                <i className="fas fa-location-arrow" id="arrow-button"></i>
-              </button>
             </div>
           </form>
           <WeatherInfo data={weatherData} />
